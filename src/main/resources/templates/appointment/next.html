@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Next Appointment</title>
+</head>
+<body>
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Upcoming Appointments</h4>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<!-- BEGIN PORTLET -->
+						<div class="panel-body panel">
+
+							<div class="portlet-body clearfix">
+								<!--BEGIN TABS-->
+								<form action="/appointment/next" class="form-inline"
+									method="GET">
+									<div class="form-group mb-2">
+										<input type="text" class="form-control" name="name"
+											placeholder="Search User" /> <input type="submit"
+											class="btn btn-primary" />
+
+									</div>
+								</form>
+
+
+
+
+								<div class="table-scrollable table-responsive patient-table">
+									<table class="table">
+										<thead>
+											<tr>
+
+												<th>Patient Name</th>
+												<th>Date</th>
+												<th>Slot</th>
+												<th>Create Date</th>
+												<th>Actions</th>
+
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<td th:text="${appointment.patient.name}"></td>
+												<td
+													th:text="${#dates.format(appointment.date, 'dd-MM-yyyy')}"></td>
+												<td th:text="${#dates.format(appointment.date, 'HH:mm')}"></td>
+												<td th:text="${appointment.createdOn}"></td>
+
+
+												<td><a
+													th:href="@{/doctor/patient-profile/{id}(id=${appointment.patient.id})}"
+													class="btn btn-outline btn-circle red btn-sm "> <i
+														class="fa fa-file-o"></i> Patient Record
+												</a> <a
+													th:href="@{/doctor/videocall/{id}(id=${appointment.id})}"
+													class="btn btn-outline btn-circle red btn-sm "> <i
+														class="fa fa-phone"></i> Call Now
+												</a></td>
+											</tr>
+
+
+										</tbody>
+
+									</table>
+								</div>
+								<div class="row">
+									<div class="col-md-12 text-right">
+										<ul class="pagination">
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<!--END TABS-->
+							</div>
+
+							<!-- END PORTLET -->
+
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>

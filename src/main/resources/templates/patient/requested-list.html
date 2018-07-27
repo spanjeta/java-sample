@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Patient Not Updated</title>
+</head>
+<body>
+
+	<!-- Start content -->
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Patient Updation List</h4>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<!-- BEGIN PORTLET -->
+						<div class="panel-body panel">
+
+
+							<div class="portlet-body clearfix">
+								<!--BEGIN TABS-->
+								<form action="/patient/requested-list" class="form-inline">
+									<div class="form-group mb-2">
+										<input type="text" class="form-control" name="name"
+											placeholder="Search User" /> <input type="submit"
+											value="Search" class="btn btn-primary" />
+									</div>
+								</form>
+								<div class="table-scrollable table-responsive patient-table">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Email</th>
+												<th>Contact Number</th>
+												<th>Gender</th>
+												<th>Created On</th>
+												<th>State</th>
+												<th>Actions</th>
+
+											</tr>
+										</thead>
+										<tbody>
+											<tr th:each="user:${patients}">
+												<td th:text="${user.name}"></td>
+												<td th:text="${user.email}"></td>
+												<td th:text="${user.contactNumber}"></td>
+												<td th:text="${user.gender}"></td>
+												<td th:text="${user.createdOn}"></td>
+												<td th:utext="${user.stateBedge}"></td>
+												<td><a th:href="@{/user/update(id=${user.id})}"
+													class="btn btn-primary"><span class="fa fa-edit"></span></a><a
+													th:href="@{/user/delete(id=${user.id})}"
+													class="btn btn-danger"><span class="fa fa-remove"></span></a></td>
+											</tr>
+
+
+										</tbody>
+									</table>
+								</div>
+								<div class="row">
+									<div class="col-md-12 text-right">
+										<ul class="pagination">
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<!--END TABS-->
+							</div>
+						</div>
+						<!-- END PORTLET -->
+
+					</div>
+				</div>
+
+
+
+
+
+
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+
+	<!-- BEGIN FOOTER -->
+
+
+</body>
+</html>

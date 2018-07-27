@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Assign Activity</title>
+</head>
+<body>
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Assign Activity</h4>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<!-- BEGIN PORTLET -->
+						<div class="panel-body panel">
+							<div class="col-md-12 ">
+								<div class="portlet-body clearfix">
+									<!--BEGIN TABS-->
+
+
+									<div class="portlet-body">
+										<div class="row">
+
+											<form class="form" role="form" action="/activity/assign"
+												th:object="${assign}" method="post">
+												<div class="col-md-2">
+													<div class="form-group">
+
+
+														<select class="form-control" th:field="*{category}"
+															id="category">
+															<option value="0">select category</option>
+															<option th:each="category : ${categories}"
+																th:value="${category.id}" th:text="${category.title}"></option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+
+														<select class="form-control" th:field="*{subcategory}"
+															id="subcategory">
+															<option value="0">select SubCategory</option>
+															<option th:each="subcategory : ${subcategories}"
+																th:value="${subcategory.id}"
+																th:text="${subcategory.title}"></option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+
+														<select class="form-control" th:field="*{disorder}"
+															id="disorder">
+															<option value="0">select Disorder</option>
+															<option th:each="disorder : ${disorders}"
+																th:value="${disorder.id}" th:text="${disorder.title}"></option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<select class="form-control">
+															<option>Toughness Level</option>
+															<option>Level 1</option>
+															<option>Level 2</option>
+															<option>Level 3</option>
+
+														</select>
+
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<input class="form-control" id="exampleInputPassword2"
+															placeholder="No Of Questions" type="password">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<a href="#" class="btn green ">Add Set </a>
+												</div>
+
+												<div class="table-scrollable table-responsive patient-table">
+													<table class="table">
+														<thead>
+															<tr>
+
+																<th>Assign Activity</th>
+																<th>Day 1</th>
+																<th>Day 2</th>
+																<th>Day 3</th>
+																<th>Day 4</th>
+																<th>Day 5</th>
+																<th>Day 6</th>
+
+
+															</tr>
+														</thead>
+														<tbody>
+
+															<tr>
+
+																<td rowspan="2"> Set 3</td>
+																<td ><i  
+																	class="fa fa-times font-red-thunderbird" ></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+
+
+															</tr>
+															<tr>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+
+															</tr>
+															<tr>
+
+																<td rowspan="2">Set 2</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+
+
+															</tr>
+															<tr>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+
+															</tr>
+															<tr>
+
+																<td rowspan="2">Set 2</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+
+
+															</tr>
+															<tr>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+																<td>Activity Title <i
+																	class="fa fa-times font-red-thunderbird"></i>
+																</td>
+
+															</tr>
+														</tbody>
+													</table>
+
+												</div>
+
+											</form>
+											<div class="row">
+												<div class="col-md-12 text-right">
+													
+													<input type="submit" value="Confirm" class="btn green" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+								<!-- END PORTLET -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+
+	<!-- BEGIN FOOTER -->
+
+
+
+</body>
+</html>

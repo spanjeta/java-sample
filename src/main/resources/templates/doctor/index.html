@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Doctor Dashboard</title>
+</head>
+<body>
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Dashboard</h4>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row widget-row">
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/appointment/upcoming">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">Upcoming Appointments in
+										3 Days</h4>
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/appointment/next">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">Appointment In Next 30
+										Mins</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/doctor/revenue">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">Revenue</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+
+				</div>
+				<div class="row widget-row">
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/activity/new-activity">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">New Activity Added</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/activity/request ">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">Request A Activity</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/filesession">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">File A Session Report</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+
+				</div>
+
+				<div class="row widget-row">
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/doctor/session">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">To file activity report
+										before 24 Hr preior to next session</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+
+
+
+				</div>
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+	<!-- content -->
+
+
+
+</body>
+</html>

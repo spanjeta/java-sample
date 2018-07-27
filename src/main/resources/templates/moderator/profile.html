@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Blank Page</title>
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Moderator Profile</h4>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+
+				<div class="row">
+					<div class="col-md-12">
+						<!-- BEGIN PROFILE SIDEBAR -->
+						<!-- BEGIN PROFILE SIDEBAR -->
+						<div class="profile-sidebar">
+							<!-- PORTLET MAIN -->
+							<div class="portlet light profile-sidebar-portlet bordered">
+								<!-- SIDEBAR USERPIC -->
+								<div class="profile-userpic">
+									<img src="/img/profile_user.jpg" class="img-responsive" alt="">
+								</div>
+								<!-- END SIDEBAR USERPIC -->
+								<!-- SIDEBAR USER TITLE -->
+								<div class="profile-usertitle">
+									<div class="profile-usertitle-name">Marcus Doe</div>
+
+								</div>
+								<!-- END SIDEBAR USER TITLE -->
+
+								<!-- SIDEBAR MENU -->
+								<div class="profile-usermenu">
+									<ul class="nav">
+										<li class="active"><a href="/user/profile"> <i
+												class="icon-home"></i> Overview
+										</a></li>
+										<li><a href="/moderator/edit-profile"> <i
+												class="icon-settings"></i> Edit Profile
+										</a></li>
+
+									</ul>
+								</div>
+								<!-- END MENU -->
+							</div>
+							<!-- END PORTLET MAIN -->
+
+						</div>
+						<!-- END BEGIN PROFILE SIDEBAR -->
+						<!-- BEGIN PROFILE CONTENT -->
+						<div class="profile-content">
+							<div class="row">
+								<div class="col-md-12">
+									<!-- BEGIN PORTLET -->
+									<div class="portlet light bordered">
+										<div class="portlet-title">
+											<div class="caption caption-md">
+												<i class="icon-bar-chart theme-font hide"></i> <span
+													class="caption-subject font-blue-madison bold uppercase">Detail</span>
+
+											</div>
+
+										</div>
+										<div class="portlet-body">
+											<div class="user-detail list-unstyled">
+												<div class="row">
+													<strong class="col-md-3 sale-info"> Name: </strong> <span
+														class="col-md-9 sale-num" th:text="${user.name}"> </span>
+												</div>
+												<hr />
+
+												<div class="row">
+													<strong class="col-md-3 sale-info"> Email: </strong> <span
+														class="col-md-9 sale-num" th:text="${user.email}">
+													</span>
+												</div>
+												<hr />
+												<div class="row">
+													<strong class="col-md-3 sale-info"> Mobile Number:
+													</strong> <span class="col-md-9 sale-num"
+														th:text="${user.contactNumber}"></span>
+												</div>
+												<hr />
+
+
+												<div class="row">
+													<strong class="col-md-3 sale-info"> Join Date: </strong> <span
+														class="col-md-9 sale-num" th:text="${user.createdOn}"></span>
+												</div>
+
+
+
+											</div>
+										</div>
+									</div>
+									<!-- END PORTLET -->
+								</div>
+
+							</div>
+
+
+						</div>
+						<!-- END PROFILE CONTENT -->
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>

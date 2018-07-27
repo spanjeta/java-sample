@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Admin-Dashboard</title>
+</head>
+<body>
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Dashboard</h4>
+
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row widget-row">
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/patient/pending-list">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">Not Verified Patient Till
+										120Hr For Pending Verification</h4>
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/patient/requested-list">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">Not Verified Patient Till
+										120Hr For Requested To Update Record</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/moderator/performance-list">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">Analytics: Performance Of
+										Moderator</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+
+				</div>
+				<div class="row widget-row">
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/doctor/diagnostic">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">Analytics: Performance of
+										Diagnostic Doctors</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/doctor/consulting">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">Analytics: Performance of
+										Consulting Doctors</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/fee/list">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">Fees Master Need
+										Updations</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+
+				</div>
+
+				<div class="row widget-row">
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/ticket/list">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">All Ticket List Complete
+										log</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/admin/slot">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">Commitment Of Slots By
+										Doctors</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/activity/report">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">Activity Reports Not
+										Filled By To Doc</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+					<div class="col-md-4">
+						<!-- BEGIN WIDGET THUMB -->
+						<a href="/activity/list">
+							<div
+								class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+								<div class="widget-thumb-wrap">
+									<h4 class="widget-thumb-heading">Manage Activity</h4>
+
+								</div>
+							</div>
+						</a>
+						<!-- END WIDGET THUMB -->
+					</div>
+					<div class="col-md-4">
+								<!-- BEGIN WIDGET THUMB -->
+								<a href="/doctor/list">
+									<div
+										class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+										<div class="widget-thumb-wrap">
+											<h4 class="widget-thumb-heading">Manage Doctor</h4>
+
+										</div>
+									</div>
+								</a>
+								<!-- END WIDGET THUMB -->
+							</div>
+							<div class="col-md-4">
+								<!-- BEGIN WIDGET THUMB -->
+								<a href="/moderator/list">
+									<div
+										class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+
+										<div class="widget-thumb-wrap">
+											<h4 class="widget-thumb-heading">Manage Moderator</h4>
+
+										</div>
+									</div>
+								</a>
+								<!-- END WIDGET THUMB -->
+							</div>
+				</div>
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+	<!-- content -->
+</body>
+</html>

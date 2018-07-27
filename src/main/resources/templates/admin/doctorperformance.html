@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Blank Page</title>
+</head>
+<body>
+
+	 <!-- Start content -->
+           <div layout:fragment="content">
+           <div class="content">
+           <div class="container-fluid">
+
+                    <!-- BEGIN PAGE BASE CONTENT -->
+                    <div class="row">
+                     <div class="col-md-12">
+                        <div class="page-title-box">
+                           <h4 class="page-title pull-left">Dashboard</h4>
+                           <ol class="breadcrumb pull-right">
+                              <li class="breadcrumb-item"><a href="#">Dr. Speak Well </a></li>
+                              <li class="breadcrumb-item active">Dashboard</li>
+                           </ol>
+                           <div class="clearfix"></div>
+                        </div>
+                     </div>
+                  </div>
+                    
+                 <div class="row">
+
+                     <div class="col-md-12">
+                                        <!-- BEGIN PORTLET -->
+                                        <div class="panel-body panel">
+                                        <div class="col-md-8 col-md-offset-2">
+                                        <div class="portlet light bordered ">
+                                            <div class="portlet-title tabbable-line clearfix">
+                                                <div class="caption caption-md">
+                                                    <i class="icon-globe theme-font hide"></i>
+                                                    <span class="caption-subject font-blue-madison bold uppercase">Consulting Doctors Performance</span>
+                                                </div>
+                                             
+                                            </div>
+                                            <div class="portlet-body clearfix">
+                                                <!--BEGIN TABS-->
+                                                  <div class="col-md-12 ">
+                                
+                                    <div class="table-scrollable patient-table">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                   
+                                                    <th> Consulting Doctors </th>
+                                                     <th> Performance (%) </th>
+                                                    
+                                                </tr>
+                                            </thead>
+                                           <tbody>
+														<tr th:each="user:${doctors}">
+															<td th:text="${user.name}"></td>
+															<td th:text="${user.performance}"></td>
+															<td th:utext="${user.stateBedge}"></td>
+															<td><a th:href="@{/user/update(id=${user.id})}"
+																class="btn btn-primary"><span class="fa fa-edit"></span></a><a
+																th:href="@{/user/delete(id=${user.id})}"
+																class="btn btn-danger"><span class="fa fa-remove"></span></a></td>
+														</tr>
+
+
+													</tbody>
+                                        </table>
+                                    </div>
+                                    <div class="row">
+                                    <div class="col-md-12 text-right">
+                                 <ul class="pagination">
+                                      <li><a href="#">1</a></li>
+                                      <li><a href="#">2</a></li>
+                                      <li><a href="#">3</a></li>
+                                      <li><a href="#">4</a></li>
+                                      <li><a href="#">5</a></li>
+                                    </ul> 
+                          </div>
+                          </div>
+                          </div>
+                                                <!--END TABS-->
+                                            </div>
+                                        </div>
+                                        <!-- END PORTLET -->
+                                    </div>
+                                    </div>
+                          </div>
+                          </div>
+                                          
+                       
+                                           
+                                    
+                                   
+                    
+                             <div class="clearfix"></div>
+                    <!-- END DASHBOARD STATS 1-->
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <!-- END PAGE BASE CONTENT -->
+                </div>
+                </div>
+                </div>
+               
+                <!-- BEGIN FOOTER -->
+</body>
+</html>

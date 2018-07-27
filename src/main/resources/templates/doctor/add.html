@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Blank</title>
+</head>
+<body>
+
+
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Add Doctor</h4>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<!-- BEGIN PORTLET -->
+						<div class="panel-body panel">
+
+							<div class="portlet-body clearfix">
+								<!--BEGIN TABS-->
+
+								<div class="col-md-6 col-md-offset-3">
+									<form role="form" th:action="@{/doctor/add}"
+										th:object="${doctor}" method="post">
+										<div class="form-group">
+											<label for="name" class="control-label">Doctor Name</label> <input
+												placeholder="Enter Doctor Name" class="form-control"
+												type="text" th:field="*{name}" id="name">
+										</div>
+										<div class="text text-danger"
+											th:if="${#fields.hasErrors('name')}" th:errors="name"></div>
+
+										<div class="form-group">
+											<label for="email" class="control-label">Email </label> <input
+												placeholder="Enter Email " class="form-control" type="text"
+												th:field="*{email}" id="email">
+										</div>
+										<div class="text text-danger"
+											th:if="${#fields.hasErrors('email')}" th:errors="email"></div>
+
+										<div class="form-group">
+											<label for="contactNumber" class="control-label">Mobile
+												Number </label> <input placeholder="Enter Mobile Number"
+												class="form-control" type="text" th:field="*{contactNumber}"
+												id="contactNumber">
+										</div>
+										<div class="text text-danger"
+											th:if="${#fields.hasErrors('contactNumber')}"
+											th:errors="contactNumber"></div>
+
+
+										<div class="form-group">
+											<label for="name" class="control-label">Upload Image
+											</label> <input type="file" id="exampleInputFile">
+
+										</div>
+										<div class="margin-top-10">
+											<input type="submit" value="Submit" class="btn green" />
+										</div>
+									</form>
+								</div>
+
+							</div>
+
+
+							<!-- END PORTLET -->
+
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+
+	<!-- BEGIN FOOTER -->
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Diagnostic</title>
+</head>
+<body>
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Diagnostic Doctor
+								Performance</h4>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<!-- BEGIN PORTLET -->
+						<div class="panel-body panel">
+
+
+							<div class="portlet-body clearfix">
+								<!--BEGIN TABS-->
+								<form action="/doctor/diagnostic" class="form-inline"
+									method="GET">
+									<div class="form-group mb-2">
+										<input type="text" class="form-control" name="name"
+											placeholder="Search User" /> <input type="submit"
+											class="btn btn-primary" />
+
+									</div>
+								</form>
+								<div class="table-scrollable patient-table">
+									<table class="table">
+										<thead>
+											<tr>
+
+												<th>Diagnostic Doctors</th>
+												<th>Performance (%)</th>
+
+											</tr>
+										</thead>
+										<tbody>
+											<tr th:each="user:${doctors}">
+												<td th:text="${user.name}"></td>
+
+
+											</tr>
+
+
+
+										</tbody>
+									</table>
+								</div>
+								<div class="row">
+									<div class="col-md-12 text-right">
+										<ul class="pagination">
+											<li th:each="i:${#numbers.sequence(0,doctors.totalPages-1)}">
+												<a th:href="@{/doctor/diagnostic(page=${i})}" th:text="${i}">1</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+								<!--END TABS-->
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+
+	<!-- BEGIN FOOTER -->
+</body>
+</html>

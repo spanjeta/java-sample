@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+
+<head>
+<meta charset="utf-8" />
+<title>Metronic Admin Theme #6 | Admin Dashboard</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta
+	content="Preview page of Metronic Admin Theme #6 for statistics, charts, recent events and reports"
+	name="description" />
+<meta content="" name="author" />
+<!-- BEGIN LAYOUT FIRST STYLES -->
+<link href="//fonts.googleapis.com/css?family=Oswald:400,300,700"
+	rel="stylesheet" type="text/css" />
+<!-- END LAYOUT FIRST STYLES -->
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link
+	href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all"
+	rel="stylesheet" type="text/css" />
+<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN THEME GLOBAL STYLES -->
+<link href="/css/components.min.css" rel="stylesheet"
+	id="style_components" type="text/css" />
+<!-- END THEME GLOBAL STYLES -->
+<link href="/css/login.min.css" rel="stylesheet" type="text/css" />
+<!-- BEGIN THEME LAYOUT STYLES -->
+<link href="/css/layout.min.css" rel="stylesheet" type="text/css" />
+<link href="/css/custom.css" rel="stylesheet" type="text/css" />
+<!-- END THEME LAYOUT STYLES -->
+<link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<!-- END HEAD -->
+
+<body class=" guest">
+		<!-- BEGIN LOGO -->
+		<header class="page-header">
+			<nav class="navbar" role="navigation">
+				<div class="container-fluid">
+					<div class="havbar-header">
+						<!-- BEGIN LOGO -->
+						<a href="/" class="logo-inner">Dr. Speak Well </a>
+						<!-- END LOGO -->
+						<!-- BEGIN TOPBAR ACTIONS -->
+						<div class="topbar-actions">
+							<!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+
+							<!-- END HEADER SEARCH BOX -->
+							<!-- BEGIN GROUP NOTIFICATION -->
+
+							<a href="/login" class="btn guest-login"> Login</a>
+
+
+							<!-- END GROUP NOTIFICATION -->
+							<!-- BEGIN USER PROFILE -->
+
+							<!-- END USER PROFILE -->
+						</div>
+						<!-- END TOPBAR ACTIONS -->
+					</div>
+				</div>
+				<!--/container-->
+			</nav>
+		</header>
+
+	<div layout:fragment="content">
+		<div class="posr">
+			<div class="logo posa">
+				<a href="/">Dr. Speak Well </a>
+			</div>
+		</div>
+		<!-- END LOGO -->
+		<!-- BEGIN LOGIN -->
+	</div>
+	<div class="copyright">2018 © Dr. Speak Well | All Rights Are
+		Reserved</div>
+
+	<!-- BEGIN CORE PLUGINS -->
+
+	<!-- BEGIN CORE PLUGINS -->
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+	<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+	
+	<!-- END PAGE LEVEL SCRIPTS -->
+	<!-- BEGIN THEME LAYOUT SCRIPTS -->
+	<!-- END THEME LAYOUT SCRIPTS -->
+	<script>
+            $(document).ready(function()
+            {
+                $('#clickmewow').click(function()
+                {
+                    $('#radio1003').attr('checked', 'checked');
+                });
+            })
+        </script>
+</body>
+
+</html>

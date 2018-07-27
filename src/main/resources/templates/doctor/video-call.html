@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Calling</title>
+</head>
+<body>
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+
+
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Video Call</h4>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<!-- BEGIN PORTLET -->
+						<div class="panel-body panel">
+							<div class="col-md-12 ">
+								<div class="portlet-body clearfix">
+									<!--BEGIN TABS-->
+
+
+									<div class="portlet-body">
+										<div class="row">
+											<div class="chat-main-row">
+												<div class="chat-main-wrapper">
+													<div class=" message-view task-view">
+														<div class="chat-window">
+															<div class="fixed-header clearfix">
+																<div class="user-details">
+																	<div class="pull-left user-img m-r-10">
+																		<a href="profile.html" title="Mike Litorus"><img
+																			src="/img/image2.jpg" alt="" class="w-40 img-circle"><span
+																			class="status online"></span></a>
+																	</div>
+																	<div class="user-info pull-left">
+																		<a href="profile.html" title="Mike Litorus"><span
+																			class="font-bold">Mike Litorus</span></a> <span
+																			class="last-seen">Online</span>
+																	</div>
+																</div>
+
+															</div>
+															<div class="chat-contents">
+																<div class="chat-content-wrap">
+																<div class="row">
+															
+																	<div class="user-video" id="subscribers">
+												<!-- <img src="/img/image2.jpg" alt="">  -->
+
+</div>
+																
+															
+																	<div class="my-video" id="publisher">
+																		<ul>
+																			<!-- 	<li><img src="/img/image2.jpg"
+																				class="img-responsive" alt=""></li> -->
+																		</ul>
+																	</div>
+																	
+																	</div>
+																</div>
+															</div>
+															<div class="chat-footer">
+																<div class="call-icons">
+																	<span class="call-duration" id="call-timer">00:00</span>
+																	<ul class="call-items">
+																		<li class="call-item"><a href="" title=""
+																			data-placement="top" data-toggle="tooltip"
+																			data-original-title="Enable Video"> <i
+																				class="fa fa-video-camera camera" aria-hidden="true"></i>
+																		</a></li>
+																		<li class="call-item"><a href="" title=""
+																			data-placement="top" data-toggle="tooltip"
+																			data-original-title="Mute Audio"> <i
+																				class="fa fa-microphone microphone"
+																				aria-hidden="true"></i>
+																		</a></li>
+
+																	</ul>
+																	<div class="end-call">
+																		<a th:href="@{/doctor/videocall-end/(id=${id})}">
+																			End Call </a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+
+
+
+								<!-- END PORTLET -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+
+		<script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+		<script th:inline="javascript">
+			/*<![CDATA[*/
+
+			var apiKey = /*[[${apiKey}]]*/'apiKey';
+			var sessionId = /*[[${sessionId}]]*/'sessionId';
+			var token = /*[[${token}]]*/'token';
+
+			/*]]>*/
+		</script>
+		<script>
+			// Initialize an OpenTok Session object
+			var session = OT.initSession(apiKey, sessionId);
+
+
+			// Initialize a Publisher, and place it into the element with id="publisher"
+			var publisherOptions = {
+				insertMode : 'append',
+				width : '200%',
+				height : '200%'
+			};
+			var publisher = OT.initPublisher('publisher', publisherOptions);
+
+			// Attach an event handler for when the session dispatches the 'streamCreated' event.
+			session.on('streamCreated', function(event) {
+				// This function runs when another client publishes a stream (eg. session.publish())
+
+				// Subscribe to the stream that caused this event, put it inside the DOM element with id='subscribers'
+				session.subscribe(event.stream, 'subscribers', {
+					insertMode : 'append'
+				}, function(error) {
+					if (error) {
+						console.error('Failed to subscribe', error);
+					}
+				});
+			});
+
+			// Connect to the Session using the 'apiKey' of the application and a 'token' for permission
+			session.connect(token, function(error) {
+				// This function runs when session.connect() asynchronously completes
+
+				// Handle connection errors
+				if (error) {
+					console.error('Failed to connect', error);
+				} else {
+					// Publish the publisher we initialzed earlier (this will trigger 'streamCreated' on other
+					// clients)
+					session.publish(publisher, function(error) {
+						if (error) {
+							console.error('Failed to publish', error);
+						}
+					});
+				}
+			});
+		</script>
+
+	</div>
+
+	<!-- BEGIN FOOTER -->
+
+
+
+</body>
+</html>

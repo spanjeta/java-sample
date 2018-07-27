@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Add</title>
+</head>
+<body>
+
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Add Activity</h4>
+							<div class="pull-right">
+								<a href="/category/list"
+									class="btn btn-outline btn-circle red btn-sm "> <i
+									class="fa fa-edit"></i> Manage Category
+								</a> <a href="/subcategory/list"
+									class="btn btn-outline btn-circle red btn-sm "> <i
+									class="fa fa-edit"></i> Manage Sub-Category
+								</a> <a href="/disorder/list"
+									class="btn btn-outline btn-circle red btn-sm "> <i
+									class="fa fa-edit"></i> Manage Disorder
+								</a>
+
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<!-- BEGIN PORTLET -->
+						<div class="panel-body panel">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="portlet-body clearfix">
+									<!--BEGIN TABS-->
+
+
+
+									<div class="portlet-body">
+										<form class="form-horizontal" role="form"
+											action="/activity/add" th:object="${activity}" method="post">
+											<div class="form-group">
+												<label for="title" class="control-label col-md-3">Name
+													Of Activity</label>
+												<div class="col-md-9">
+													<input class="form-control" type="text" th:field="*{title}"
+														id="title">
+												</div>
+											</div>
+
+
+											<div class="form-group">
+												<label for="category" class="control-label col-md-3">Select
+													Category</label>
+												<div class="col-md-9">
+													<!-- <select class="form-control" id="rows0.category" name="rows[0].category">
+														<option selected="selected" value="1">Shoulder
+															Exercise</option>
+														<option value="2">Eye Exercise</option>
+														<option value="3">Morning Walk</option>
+														<option value="4">Yoga</option>
+
+													</select> -->
+
+													<select class="form-control" th:field="*{category}"
+														id="category">
+														<option value="0">select category</option>
+														<option th:each="category : ${categories}"
+															th:value="${category.id}" th:text="${category.title}"></option>
+													</select>
+
+
+
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="subcategory" class="control-label col-md-3">Select
+													Sub Category</label>
+												<div class="col-md-9">
+
+													<select class="form-control" th:field="*{subcategory}"
+														id="subcategory">
+														<option value="0">select SubCategory</option>
+														<option th:each="subcategory : ${subcategories}"
+															th:value="${subcategory.id}" th:text="${subcategory.title}"></option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="disorder" class="control-label col-md-3">Select
+													Disorder </label>
+												<div class="col-md-9">
+													<!-- <select multiple="" class="form-control">
+														<option>Mental Disorder</option>
+														<option>Mental Disorder</option>
+														<option>Mental Disorder</option>
+														<option>Mental Disorder</option>
+														<option>Mental Disorder</option>
+													</select> -->
+													<select class="form-control" th:field="*{disorder}"
+														id="disorder">
+														<option value="0">select Disorder</option>
+														<option th:each="disorder : ${disorders}"
+															th:value="${disorder.id}" th:text="${disorder.title}"></option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="toughnessLevel" class="control-label col-md-3">Toughness
+													Level</label>
+												<div class="col-md-9">
+													<div class="mt-radio-inline">
+														<label class="mt-radio"> <input type="radio"
+															th:field="*{toughnessLevel}" id="optionsRadios4"
+															value="1" checked=""> Level 1 <span></span>
+														</label> <label class="mt-radio"> <input type="radio"
+															th:field="*{toughnessLevel}" id="optionsRadios5"
+															value="2"> Level 2 <span></span>
+														</label> <label class="mt-radio "> <input type="radio"
+															th:field="*{toughnessLevel}" id="optionsRadios6"
+															value="3"> Level 3 <span></span>
+														</label>
+														
+
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-9 col-md-offset-1">
+													<div class="col-md-6">
+														<div class="form-group">
+
+															<label for="type">Activity Type</label>
+
+															<div class="mt-radio-list">
+																<label  class="mt-radio"> Only Text <input
+																	type="radio" value="1" name="test" th:field="*{type}">
+																	<span></span>
+																</label> <label class="mt-radio">With Audio
+																	Clip <input type="radio" value="1" name="test"
+																	th:field="*{type}"> <span></span>
+																</label> <label  class="mt-radio"> With One
+																	Image <input type="radio" value="1" name="test"
+																	th:field="*{type}"> <span></span>
+																</label> <label class="mt-radio"> With Image
+																	Full Screen <input type="radio" value="1" name="test"
+																	th:field="*{type}"> <span></span>
+																</label> <label  class="mt-radio"> With One
+																	Image Solution <input type="radio" value="1"
+																	name="test" th:field="*{type}"> <span></span>
+																</label> <label  class="mt-radio"> With One
+																	Image <input type="radio" value="1" name="test"
+																	th:field="*{type}"> <span></span>
+																</label> <label  class="mt-radio"> With One
+																	Full Screen Image As Solution <input type="radio"
+																	value="1" name="test" th:field="*{type}"> <span></span>
+																</label>
+															</div>
+
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="form-group">
+															<label for="solution">Solution Type</label>
+
+															<div class="mt-radio-list">
+																<label  class="mt-radio"> Two
+																	Buttons <input type="radio" value="1" th:field="*{solution}">
+																	<span></span>
+																</label> <label class="mt-radio"> Audio <input
+																	type="radio" value="1" th:field="*{solution}">
+																	<span></span>
+																</label> <label  class="mt-radio"> Text
+																	Area <input type="radio" value="1"
+																	th:field="*{solution}"> <span></span>
+																</label> <label  class="mt-radio">Select
+																	One Image From 2 Or 3 Or 4 <input type="radio"
+																	value="1" th:field="*{solution}"> <span></span>
+																</label> <label class="mt-radio"> Select
+																	One Full Screen Image From Multiple <input type="radio"
+																	value="1" th:field="*{solution}"> <span></span>
+																</label>
+
+
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="text-right margin-top-10">
+												<input type="submit" class="btn green" />
+											</div>
+										</form>
+									</div>
+
+
+
+									<!--END TABS-->
+								</div>
+								<!-- END PORTLET -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+
+	</div>
+
+	<!-- BEGIN FOOTER -->
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Blank</title>
+</head>
+<body>
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Edit Profile</h4>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+
+					<div class="col-md-3">
+						<!-- BEGIN PROFILE SIDEBAR -->
+					</div>
+					<!-- END BEGIN PROFILE SIDEBAR -->
+					<!-- BEGIN PROFILE CONTENT -->
+					<div class="col-md-9">
+						<div class="profile-content">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="portlet light bordered">
+
+										<div class="portlet-body">
+											<div class="tab-content">
+												<!-- PERSONAL INFO TAB -->
+												<div class="tab-pane active" id="tab_1_1">
+													<form role="form" action="#">
+														<div class="form-group">
+															<label class="control-label">First Name</label> <input
+																placeholder="John" class="form-control" type="text">
+														</div>
+														<div class="form-group">
+															<label class="control-label">Last Name</label> <input
+																placeholder="Doe" class="form-control" type="text">
+														</div>
+														<div class="form-group">
+															<label class="control-label">Mobile Number</label> <input
+																placeholder="+1 646 580 DEMO (6284)"
+																class="form-control" type="text">
+														</div>
+
+
+
+														<div class="form-group">
+															<label class="control-label">New Password</label> <input
+																class="form-control" type="password">
+														</div>
+														<div class="form-group">
+															<label class="control-label">Re-type New Password</label>
+															<input class="form-control" type="password">
+														</div>
+														<div class="margin-top-10">
+															<a href="/user/profile" class="btn green"> Change
+																Password </a> <a href="/user/profile" class="btn default">
+																Cancel </a>
+														</div>
+													</form>
+												</div>
+												<!-- END CHANGE PASSWORD TAB -->
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END PROFILE CONTENT -->
+
+				</div>
+
+
+
+
+
+
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+
+	<!-- BEGIN FOOTER -->
+
+
+
+</body>
+</html>

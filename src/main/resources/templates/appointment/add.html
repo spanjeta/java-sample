@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Add Appointment</title>
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<div class="page-fixed-main-content">
+			<div class="row">
+				<form class="" th:action="@{/ticket/addx}"
+					th:object="${appointment}" method="post">
+
+					<div class="col-xs-6 form-group">
+						<label for="Date" class="form-control-label">Appointment
+							Date </label> <input type="date" class="form-control"
+							th:field="*{date}" id="date" />
+						<div class="text text-danger"
+							th:if="${#fields.hasErrors('date')}"
+							th:errors="*{date}"></div>
+					</div>
+					<div class="col-xs-6 form-group">
+						<label for="Date" class="form-control-label">Appointment
+							Time </label> <input type="time" class="form-control"
+							th:field="*{time}" id="date" />
+						<div class="text text-danger"
+							th:if="${#fields.hasErrors('time')}"
+							th:errors="*{time}"></div>
+					</div>
+
+
+
+					<div class="col-xs-6 form-group">
+						<label for="description" class="form-control-label">Description</label>
+						<textarea class="form-control" th:field="*{description}"
+							id="description">  </textarea>
+						<div class="text text-danger"
+							th:if="${#fields.hasErrors('description')}"
+							th:errors="*{description}"></div>
+
+
+					</div>
+					<div class="col-xs-6 form-group">
+						<label for="noteForPatient" class="form-control-label">Note
+							For Doctor</label>
+						<textarea class="form-control" th:field="*{noteForPatient}"
+							id="noteForPatient">  </textarea>
+						<div class="text text-danger"
+							th:if="${#fields.hasErrors('noteForPatient')}"
+							th:errors="*{noteForPatient}"></div>
+
+
+					</div>
+					<div class="col-xs-6 form-group">
+						<label for="noteForDoctor" class="form-control-label">Note
+							For Patient</label>
+						<textarea class="form-control" th:field="*{noteForDoctor}"
+							id="note_for_patient">  </textarea>
+						<div class="text text-danger"
+							th:if="${#fields.hasErrors('noteForDoctor')}"
+							th:errors="*{noteForDoctor}"></div>
+
+
+					</div>
+					<div class="col-xs-6 form-group">
+						<label for="reason" class="form-control-label">Reason</label>
+						<textarea class="form-control" th:field="*{reason}" id="reason">  </textarea>
+						<div class="text text-danger"
+							th:if="${#fields.hasErrors('reason')}" th:errors="reason"></div>
+
+
+					</div>
+
+
+					<div class="col-xs-6 form-group">
+						<label for="startTime" class="form-control-label">Start
+							Time</label> <input type="time" class="form-control"
+							th:field="*{startTime}" id="startTime" />
+						<div class="text text-danger"
+							th:if="${#fields.hasErrors('startTime')}"
+							th:errors="*{startTime}"></div>
+
+					</div>
+					<div class="col-xs-6 form-group">
+						<label for="stopTime" class="form-control-label">Stop Time</label>
+						<input type="time" class="form-control" th:field="*{stopTime}"
+							id="stopTime" />
+						<div class="text text-danger"
+							th:if="${#fields.hasErrors('stopTime')}" th:errors="*{stopTime}"></div>
+					</div>
+
+					
+
+					<div class="col-xs-12 form-group">
+						<input type="submit" value="Submit" class="btn btn-primary" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

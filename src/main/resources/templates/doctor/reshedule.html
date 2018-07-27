@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Reshedule</title>
+</head>
+<body>
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">
+								<i class="fa fa-calendar"></i> Calender
+							</h4>
+							<a href="/slot/add"> <span title="Add Slot"
+								class=" font-blue-madison bold uppercase pull-right add-icon"><i
+									class="icon-plus "></i></span></a>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="portlet light bordered">
+							<div class="portlet-title">
+								<div class="caption">
+
+
+
+
+
+									<div class="tools">
+										<a href="javascript:;" class="collapse"> </a> <a
+											href="#portlet-config" data-toggle="modal" class="config">
+										</a>
+									</div>
+								</div>
+								<div class="portlet-body">
+									<div id="calendar" class="has-toolbar"></div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-body">
+						<div class="portlet light bordered ">
+							<div class="portlet-title tabbable-line clearfix">
+								<div class="caption caption-md">
+									<span class="caption-subject font-blue-madison bold uppercase">Available
+										Slots</span>
+								</div>
+
+							</div>
+							<form>
+								<div id="next-available-slots" class="row">
+									<div class="slot col-xs-4 col-sm-2">
+										<input type="radio" name="time-slot" id="time-slot-1"
+											data-index="0" value="2016-09-21" /> <label
+											for="time-slot-1">2pm-3pm </label>
+									</div>
+									<div class="slot col-xs-4 col-sm-2">
+										<input type="radio" name="time-slot" id="time-slot-2"
+											data-index="1" value="2016-09-26" /> <label
+											for="time-slot-2">12pm-1pm</label>
+										<!-- longest day name -->
+									</div>
+									<div class="slot col-xs-4 col-sm-2">
+										<input type="radio" name="time-slot" id="time-slot-3"
+											data-index="2" value="2016-09-25" /> <label
+											for="time-slot-3">1pm-2pm</label>
+										<!-- longest month name -->
+									</div>
+
+									<div class="slot col-xs-4 col-sm-2">
+										<input type="radio" name="time-slot" id="time-slot-4"
+											data-index="3" value="2016-09-25" /> <label
+											for="time-slot-4">4pm-5pm</label>
+									</div>
+									<div class="slot col-xs-4 col-sm-2">
+										<input type="radio" name="time-slot" id="time-slot-5"
+											data-index="4" value="2016-09-25" /> <label
+											for="time-slot-5">5pm-6pm</label>
+									</div>
+									<div class="slot col-xs-4 col-sm-2">
+										<input type="radio" name="time-slot" id="time-slot-6"
+											data-index="5" value="2016-09-25" /> <label
+											for="time-slot-6">6pm-7pm </label>
+									</div>
+								</div>
+
+							</form>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- content -->
+
+	</div>
+
+</body>
+</html>

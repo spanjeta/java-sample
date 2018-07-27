@@ -1,0 +1,67 @@
+admin panel:-
+
+
+1. not verified patient :- verified button or delete button.
+
+2. same in updation
+
+3. moderation and doctor performance data not enter or fetch 
+
+4. city fee data not entered  or action button not working.
+
+5. ticket data fetch but action not in working state or data not entered via form
+
+6. Doctor booked slot not in working.
+
+7. manage activity list not working  (view , add activity)
+
+8. manage doctor or moderator data fecth but action not working or data not entered by form
+
+9. change password not working 
+
+10.drop down button
+	my account not working
+		
+11. paggination
+
+ --------------------------------------------------------------------------
+
+moderator panel :-
+
+1. not verified patient :- update button or delete button.
+
+2. same in updation 
+
+3. payment mod
+
+4. appointment data not entered or fetch
+
+5. Device having more than 3 user login not working 
+
+6. nero device and yet call cancelled
+
+7.Technical issue in app talk box bug
+
+8. dropdown button (my profile and change password).
+
+
+----------------------------------------------------------------------------
+
+Doctor Panel :-
+
+1. upcoming appointments in 3 days 
+     ------Reshedule button
+     ------date timeSlot
+
+2. Appointment in next 30 mins
+
+3. Revenue
+
+4. Activity 
+
+5. request a activity form
+
+6. file session report form 
+
+7. file activity report before 24 hour preior to next session
+

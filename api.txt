@@ -1,0 +1,33 @@
+public static final String API_GET_SCHEDULE_SESSION = "api/availibilty/get-schedule-session";  // get assign doctor detail and schedule session.
+
+
+public static final String API_GET_SLOTS = "api/availibilty/get-slot";  // Slots list for particular date
+
+
+
+public static final String API_AVAILIBILITY_APPOINTMENT = "api/availibilty/appointment";  // param slot id
+
+
+public static final String API_USER_CHECK = "api/user/check";
+
+
+public static final String API_GET_SCHEDULE_SESSION = "api/availibilty/get-schedule-session";  // get assign doctor detail and schedule session.
+
+
+
+For SLot two fields are required 
+public int id;
+public String time; // only time 
+
+
+For Appointment Booking Detail
+@SerializedName("appointmentTime")
+@Expose
+public String appointmentTime;
+
+@SerializedName("id")
+@Expose
+public Integer id;
+@SerializedName("appointmentDate")
+@Expose
+public String appointmentDate;

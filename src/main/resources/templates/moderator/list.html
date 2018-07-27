@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>List</title>
+</head>
+<body>
+
+
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Moderator List</h4>
+							<a href="/moderator/add"> <span title="Add Moderator"
+								class=" font-blue-madison bold uppercase pull-right add-icon"><i
+									class="icon-plus "></i></span></a>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<!-- BEGIN PORTLET -->
+						<div class="panel-body panel">
+
+
+							<div class="portlet-body clearfix">
+								<!--BEGIN TABS-->
+								<form action="/moderator/list" class="form-inline" method="GET">
+									<div class="form-group mb-2">
+										<input type="text" class="form-control" name="name"
+											placeholder="Search User" /> <input type="submit"
+											class="btn btn-primary" />
+
+									</div>
+								</form>
+
+
+
+
+								<div class="table-scrollable table-responsive patient-table">
+									<table class="table">
+										<thead>
+											<tr>
+
+												<th>Moderator Name</th>
+												<th>Email</th>
+												<th>Mobile Number</th>
+												<th>Gender</th>
+												<th>Created On</th>
+												<th>Action</th>
+
+											</tr>
+										</thead>
+										<tbody>
+											<tr th:each="user:${moderators}">
+												<td th:text="${user.name}"></td>
+												<td th:text="${user.email}"></td>
+												<td th:text="${user.contactNumber}"></td>
+												<td th:text="${user.gender}"></td>
+												<td th:text="${user.createdOn}"></td>
+												<!--  	<td th:utext="${user.stateBedge}"></td>-->
+												<td><a th:href="@{/moderator/update(id=${user.id})}"
+													class="btn btn-primary"><span class="fa fa-edit"></span></a><a
+													th:href="@{'/moderator/{id}/delete'(id=${user.id})}"
+													class="btn btn-danger"><span class="fa fa-remove"></span></a></td>
+											</tr>
+
+
+										</tbody>
+									</table>
+								</div>
+								<div class="row">
+									<div class="col-md-12 text-right">
+										<ul class="pagination">
+											<li
+												th:each="i:${#numbers.sequence(0,moderators.totalPages-1)}">
+												<a th:href="@{/moderator/list(page=${i})}" th:text="${i}">1</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+
+								<!--END TABS-->
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+
+	<!-- BEGIN FOOTER -->
+
+</body>
+</html>

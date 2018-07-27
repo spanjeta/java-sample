@@ -1,0 +1,35 @@
+
+
+           <nav class="navbar-custom" th:fragment="header">
+               <ul class="list-unstyled topbar-right-menu pull-right mb-0 clearfix">
+                <li>
+                                <a class="nav-link  arrow-none waves-light waves-effect"  href="/doctor/reshedule" role="button" aria-haspopup="false" aria-expanded="false">
+                     <i class="fa fa-calendar noti-icon"></i>
+                     </a>
+                               
+                           </li>
+                         
+               <li class="dropdown notification-list">
+                     <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                     <img src="/img/avatar1.jpg" alt="user" class="rounded-circle">  <i class="fa fa-chevron-down"></i> 
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                        <!-- item-->
+                        <div class="dropdown-item noti-title">
+                           <h6 class="text-overflow m-0">Welcome !</h6>
+                        </div>
+                        <!-- item-->
+                        <a href="/user/profile" class="dropdown-item notify-item">
+                        <i class="icon-user"></i> <span>My Account</span>
+                        </a>
+                                         
+                        <!-- item-->
+                        <a href="/logout" class="dropdown-item notify-item">
+                        <i class="icon-key"></i> <span>Logout</span>
+                        </a>
+                     </div>
+                  </li>
+             
+               </ul>
+              
+            </nav>
