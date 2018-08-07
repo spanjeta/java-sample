@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Blank</title>
+</head>
+<body>
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Add Sub Category</h4>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<!-- BEGIN PORTLET -->
+						<div class="panel-body panel">
+							<div class="col-md-12 ">
+								<div class="portlet-body clearfix">
+									<!--BEGIN TABS-->
+									<div class="portlet-body">
+										<div class="col-md-7 col-md-offset-2">
+										
+										
+											
+										<div class="portlet-body">
+										 <form class="form-horizontal" action="/subcategory/add"
+					                         th:object="${subCategory}" method="post">
+											<div class="form-group">
+												<label for="title"  class="control-label col-md-3">Add Sub Category
+													</label>
+												<div class="col-md-9">
+													<input	class="form-control" type="text" th:field="*{title}" id="title">
+												</div>
+											</div>
+											<div class="text-right margin-top-10">
+													<input type="submit" value="Submit" class="btn green">
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<!-- END PORTLET -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- BEGIN FOOTER -->
+</body>
+</html>

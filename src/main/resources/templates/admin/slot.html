@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Slot</title>
+</head>
+<body>
+
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Committed Slots List</h4>
+							<a href="/slot/add"> <span title="Add Slot"
+								class=" font-blue-madison bold uppercase pull-right add-icon"><i
+									class="icon-plus "></i></span></a>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<!-- BEGIN PORTLET -->
+						<div class="panel-body panel">
+
+
+							<div class="portlet-body clearfix">
+								<!--BEGIN TABS-->
+								<form action="/admin/slot" class="form-inline" method="GET">
+									<div class="form-group mb-2">
+										<input type="text" class="form-control" name="name"
+											placeholder="Search User" /> <input type="submit"
+											class="btn btn-primary" />
+
+									</div>
+								</form>
+
+
+								<div class="table-scrollable table-responsive patient-table">
+									<table class="table">
+										<thead>
+											<tr>
+
+												<th>Doctor Name</th>
+												<th>Booked Slots</th>
+
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+
+												<td>Mark</td>
+												<td>
+													<button type="button" class="btn red btn-outline">2pm-3pm</button>
+													<button type="button" class="btn red btn-outline">5pm-6pm</button>
+													<button type="button" class="btn red btn-outline">12pm-1pm</button>
+													<button type="button" class="btn red btn-outline">6pm-7pm</button>
+
+												</td>
+											</tr>
+											<tr>
+
+												<td>Mark</td>
+												<td>
+													<button type="button" class="btn red btn-outline">2pm-3pm</button>
+													<button type="button" class="btn red btn-outline">5pm-6pm</button>
+													<button type="button" class="btn red btn-outline">12pm-1pm</button>
+													<button type="button" class="btn red btn-outline">6pm-7pm</button>
+
+												</td>
+											</tr>
+											<tr>
+
+												<td>Mark</td>
+												<td>
+													<button type="button" class="btn red btn-outline">2pm-3pm</button>
+													<button type="button" class="btn red btn-outline">5pm-6pm</button>
+													<button type="button" class="btn red btn-outline">12pm-1pm</button>
+													<button type="button" class="btn red btn-outline">6pm-7pm</button>
+
+												</td>
+											</tr>
+											<tr>
+
+												<td>Mark</td>
+												<td>
+													<button type="button" class="btn red btn-outline">2pm-3pm</button>
+													<button type="button" class="btn red btn-outline">5pm-6pm</button>
+													<button type="button" class="btn red btn-outline">12pm-1pm</button>
+													<button type="button" class="btn red btn-outline">6pm-7pm</button>
+
+												</td>
+											</tr>
+											<tr>
+
+												<td>Mark</td>
+												<td>
+													<button type="button" class="btn red btn-outline">2pm-3pm</button>
+													<button type="button" class="btn red btn-outline">5pm-6pm</button>
+													<button type="button" class="btn red btn-outline">12pm-1pm</button>
+													<button type="button" class="btn red btn-outline">6pm-7pm</button>
+
+												</td>
+											</tr>
+											<tr>
+
+												<td>Mark</td>
+												<td>
+													<button type="button" class="btn red btn-outline">2pm-3pm</button>
+													<button type="button" class="btn red btn-outline">5pm-6pm</button>
+													<button type="button" class="btn red btn-outline">12pm-1pm</button>
+													<button type="button" class="btn red btn-outline">6pm-7pm</button>
+
+												</td>
+											</tr>
+											<tr>
+
+												<td>Mark</td>
+												<td>
+													<button type="button" class="btn red btn-outline">2pm-3pm</button>
+													<button type="button" class="btn red btn-outline">5pm-6pm</button>
+													<button type="button" class="btn red btn-outline">12pm-1pm</button>
+													<button type="button" class="btn red btn-outline">6pm-7pm</button>
+
+												</td>
+											</tr>
+											<tr>
+
+												<td>Mark</td>
+												<td>
+													<button type="button" class="btn red btn-outline">2pm-3pm</button>
+													<button type="button" class="btn red btn-outline">5pm-6pm</button>
+													<button type="button" class="btn red btn-outline">12pm-1pm</button>
+													<button type="button" class="btn red btn-outline">6pm-7pm</button>
+
+												</td>
+											</tr>
+											<tr>
+
+												<td>Mark</td>
+												<td>
+													<button type="button" class="btn red btn-outline">2pm-3pm</button>
+													<button type="button" class="btn red btn-outline">5pm-6pm</button>
+													<button type="button" class="btn red btn-outline">12pm-1pm</button>
+													<button type="button" class="btn red btn-outline">6pm-7pm</button>
+
+												</td>
+											</tr>
+											<tr>
+
+												<td>Mark</td>
+												<td>
+													<button type="button" class="btn red btn-outline">2pm-3pm</button>
+													<button type="button" class="btn red btn-outline">5pm-6pm</button>
+													<button type="button" class="btn red btn-outline">12pm-1pm</button>
+													<button type="button" class="btn red btn-outline">6pm-7pm</button>
+
+												</td>
+											</tr>
+
+
+										</tbody>
+									</table>
+								</div>
+								<div class="row">
+									<div class="col-md-12 text-right">
+										<ul class="pagination">
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<!--END TABS-->
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+
+	<!-- BEGIN FOOTER -->
+
+
+
+</body>
+</html>

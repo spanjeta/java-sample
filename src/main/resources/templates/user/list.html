@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Blank Page</title>
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<div class="page-fixed-main-content">
+			<!-- BEGIN PAGE BASE CONTENT -->
+			<div class="row">
+				<div class="col-md-12">
+					<form action="/users" class="form-inline">
+						<div class="form-group mb-2">
+							<input type="text" class="form-control" name="name"
+								placeholder="Search User" /> <input type="submit"
+								value="Search" class="btn btn-primary" />
+						</div>
+					</form>
+					<div class="card">
+						<div class="card card-body">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Email</th>
+										<th>State</th>
+										<th>Created At</th>
+										<th>Actions</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="user:${users}">
+										<td th:text="${user.name}"></td>
+										<td th:text="${user.email}"></td>
+										<td th:text="${user.state}"></td>
+										<td th:text="${user.created_at}"></td>
+										<td><a th:href="@{/user/update(id=${user.id})}"
+											class="btn btn-success">Update</a><a th:href="@{/user/delete(id=${user.id})}"
+											class="btn btn-dark">Delete</a></td>
+									</tr>
+								</tbody>
+
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

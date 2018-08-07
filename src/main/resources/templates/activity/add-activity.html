@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Activity Added</title>
+</head>
+<body>
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">New Activity Added</h4>
+							<a href="/activity/request"> <span title="Request Activity"
+								class=" font-blue-madison bold uppercase pull-right add-icon"><i
+									class="icon-plus "></i></span></a>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<!-- BEGIN PORTLET -->
+						<div class="panel-body panel">
+
+
+							<div class="portlet-body clearfix">
+								<!--BEGIN TABS-->
+
+								<form action="/activity/new-activity" class="form-inline" method="GET">
+									<div class="form-group mb-2">
+										<input type="text" class="form-control" name="name"
+											placeholder="Search User" /> <input type="submit"
+											class="btn btn-primary" />
+
+									</div>
+								</form>
+								<div class="table-scrollable table-responsive patient-table">
+									<table class="table">
+										<thead>
+											<tr>
+
+												<th>Image</th>
+												<th>Title</th>
+												<th>Description</th>
+
+											</tr>
+										</thead>
+										<tbody>
+											<tr th:each="request:${request}">
+												<td></td>
+												<td th:text="${request.title}"></td>
+												<td th:text="${request.description}"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="row">
+									<div class="col-md-12 text-right">
+										<ul class="pagination">
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+										</ul>
+									</div>
+								</div>
+
+
+								<!-- END PORTLET -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+
+	<!-- BEGIN FOOTER -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Moderator Dashboard</title>
+</head>
+<body>
+
+	
+ <!-- Start content -->
+           <div layout:fragment="content">
+           <div class="content">
+           <div class="container-fluid">
+
+                    <!-- BEGIN PAGE BASE CONTENT -->
+                    <div class="row">
+                     <div class="col-md-12">
+                        <div class="page-title-box">
+                           <h4 class="page-title pull-left">Dashboard</h4>
+                           
+                           <div class="clearfix"></div>
+                        </div>
+                     </div>
+                  </div>
+                    <div class="row widget-row">
+                        <div class="col-md-4">
+                            <!-- BEGIN WIDGET THUMB -->
+                           <a href="/patient/pending-list"> 
+                           <div class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+                                
+                                <div class="widget-thumb-wrap">
+                                 <h4 class="widget-thumb-heading">List Of Patients Pending For Verifications</h4>
+                                </div>
+                            </div></a>
+                            <!-- END WIDGET THUMB -->
+                        </div>
+                        <div class="col-md-4">
+                            <!-- BEGIN WIDGET THUMB -->
+                            <a href="/patient/requested-list">
+                            <div class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+                                
+                                <div class="widget-thumb-wrap">
+                                <h4 class="widget-thumb-heading">List of patients Requested to update record</h4>
+                                    
+                                </div>
+                            </div></a>
+                            <!-- END WIDGET THUMB -->
+                        </div>
+                        <div class="col-md-4">
+                            <!-- BEGIN WIDGET THUMB -->
+                            <a href="/payment/failed"> 
+                            <div class="widget-thumb widget-bg-color-white bg-green  margin-bottom-20 bordered">
+                                
+                                <div class="widget-thumb-wrap">
+                                  <h4 class="widget-thumb-heading">List Of Failed Payments</h4>   
+                                </div>
+                            </div></a>
+                            <!-- END WIDGET THUMB -->
+                        </div>
+                        
+                    </div>
+                     <div class="row widget-row">
+                        <div class="col-md-4">
+                            <!-- BEGIN WIDGET THUMB -->
+                            <a href="/moderator/mod-patient">
+                            <div class="widget-thumb widget-bg-color-white bg-green  margin-bottom-20 bordered">
+                               
+                                <div class="widget-thumb-wrap">
+                                 <h4 class="widget-thumb-heading">List of Appointments cancelled less than 1 day by Doctor</h4>
+                                    
+                                </div>
+                            </div></a>
+                            <!-- END WIDGET THUMB -->
+                        </div>
+                        <div class="col-md-4">
+                            <!-- BEGIN WIDGET THUMB -->
+                            <a href="/moderator/mod-patient">
+                            <div class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+                                
+                                <div class="widget-thumb-wrap">
+                                <h4 class="widget-thumb-heading">List of Appointments cancelled More than 1 day by Doctor </h4>
+                                    
+                                </div>
+                            </div></a>
+                            <!-- END WIDGET THUMB -->
+                        </div>
+                        <div class="col-md-4">
+                            <!-- BEGIN WIDGET THUMB -->
+                            <a href="/call/list">
+                            <div class="widget-thumb widget-bg-color-white bg-green  margin-bottom-20 bordered">
+                               
+                                <div class="widget-thumb-wrap">
+                                    <h4 class="widget-thumb-heading">Upcoming Calls Dr. Not Loged In</h4>
+                                 
+                                </div>
+                            </div></a>
+                            <!-- END WIDGET THUMB -->
+                        </div>
+                        
+                    </div>
+
+                      <div class="row widget-row">
+                        <div class="col-md-4">
+                            <!-- BEGIN WIDGET THUMB -->
+                            <a href="/device/details">
+                            <div class="widget-thumb widget-bg-color-white bg-green  margin-bottom-20 bordered">
+                           
+                                <div class="widget-thumb-wrap">
+                                     <h4 class="widget-thumb-heading">Moderate the Doctor Through App(Nuro) or Device having more than 3 user logins</h4>
+                                   
+                                </div>
+                            </div></a>
+                            <!-- END WIDGET THUMB -->
+                        </div>
+                       
+                        <div class="col-md-4">
+                            <!-- BEGIN WIDGET THUMB -->
+                            <a href="/device/nero-list">
+                            <div class="widget-thumb widget-bg-color-white bg-green margin-bottom-20 bordered">
+                           
+                                <div class="widget-thumb-wrap">
+                                     <h4 class="widget-thumb-heading">Device = Nero Device And Than Yet Call Is Cancelled</h4>
+                                   
+                                </div>
+                            </div></a>
+                            <!-- END WIDGET THUMB -->
+                        </div>
+                         <div class="col-md-4">
+                            <!-- BEGIN WIDGET THUMB -->
+                            <a href="/technical/issues">
+                            <div class="widget-thumb widget-bg-color-white bg-green  margin-bottom-20 bordered">
+                           
+                                <div class="widget-thumb-wrap">
+                                     <h4 class="widget-thumb-heading">Technical Issues In App Talk Box Bug</h4>
+                                   
+                                </div>
+                            </div></a>
+                            <!-- END WIDGET THUMB -->
+                        </div>
+                    </div>
+                  
+                    <div class="row widget-row">
+                        <div class="col-md-4">
+                            <!-- BEGIN WIDGET THUMB -->
+                            <a href="/session/report">
+                            <div class="widget-thumb widget-bg-color-white bg-green  margin-bottom-20 bordered">
+                           
+                                <div class="widget-thumb-wrap">
+                                     <h4 class="widget-thumb-heading">List Of Patient For Whom Session Report Not Filled Even After 48 Hrs</h4>
+                                   
+                                </div>
+                            </div></a>
+                            <!-- END WIDGET THUMB -->
+                        </div>
+                       
+                    </div>
+                             <div class="clearfix"></div>
+                    <!-- END DASHBOARD STATS 1-->
+                  
+                    <!-- END PAGE BASE CONTENT -->
+                </div>
+                </div>
+                </div>
+            <!-- content -->          
+	
+	
+</body>
+</html>

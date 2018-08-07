@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Activity Added</title>
+</head>
+<body>
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Disorder List</h4>
+							<a href="/disorder/add"> <span title="Add Category"
+								class=" font-blue-madison bold uppercase pull-right add-icon"><i
+									class="icon-plus "></i></span></a>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<!-- BEGIN PORTLET -->
+						<div class="panel-body panel">
+
+
+							<div class="portlet-body clearfix">
+								<!--BEGIN TABS-->
+
+
+								<div class="table-scrollable table-responsive patient-table">
+									<table class="table">
+										<thead>
+											<tr>
+
+
+												<th>Title</th>
+												<th>Action</th>
+
+											</tr>
+										</thead>
+										<tbody>
+											<tr th:each="disorder:${disorders}">
+
+												<td th:text="${disorder.title}"></td>
+												<td><a
+													th:href="@{/disorder/update(id=${disorder.id})}"
+													class="btn btn-primary"><span class="fa fa-edit"></span></a>
+													<a
+													th:href="@{'/disorder/{id}/delete'(id=${disorder.id})}"
+													class="btn btn-danger"><span class="fa fa-remove"></span></a></td>
+
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="row">
+									<div class="col-md-12 text-right">
+										<ul class="pagination">
+											 <li th:each="i:${#numbers.sequence(0,disorders.totalPages-1)}">
+												<a th:href="@{/disorder/list(page=${i})}" th:text="${i}">1</a>
+											</li>
+											
+										</ul>
+									</div>
+								</div>
+
+
+								<!-- END PORTLET -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+
+	<!-- BEGIN FOOTER -->
+
+
+
+</body>
+</html>

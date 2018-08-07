@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Nero Device</title>
+</head>
+<body>
+
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">User</h4>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<!-- BEGIN PORTLET -->
+						<div class="panel-body panel">
+
+
+							<div class="portlet-body clearfix">
+								<!--BEGIN TABS-->
+								<form action="/ticket/list" class="form-inline" method="GET">
+									<div class="form-group mb-2">
+										<input type="text" class="form-control" name="name"
+											placeholder="Search User" /> <input type="submit"
+											class="btn btn-primary" />
+
+									</div>
+								</form>
+
+
+								<div class="table-scrollable table-responsive patient-table">
+									<table class="table">
+										<thead>
+											<tr>
+
+												<th>Device Id</th>
+												<th>Phone Number</th>
+												<th>Created on</th>
+
+											</tr>
+										</thead>
+										<tbody>
+											<tr th:each="user:${devices}">
+												<td th:text="${user.id}"></td>
+												<td th:text="${user.contactNumber}"></td>
+												<td th:text="${user.createdOn}"></td>
+
+												<!--  	<td><a th:href="@{/user/update(id=${user.id})}"
+													class="btn btn-primary"><span class="fa fa-edit"></span></a><a
+													th:href="@{/user/delete(id=${user.id})}"
+													class="btn btn-danger"><span class="fa fa-remove"></span></a></td>
+										-->
+											</tr>
+
+
+										</tbody>
+									</table>
+								</div>
+								<div class="row">
+									<div class="col-md-12 text-right">
+										<ul class="pagination">
+											<li th:each="i:${#numbers.sequence(0,devices.totalPages-1)}">
+												<a th:href="@{/device/nero-list(page=${i})}" th:text="${i}">1</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<!--END TABS-->
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+
+
+
+
+
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+
+	<!-- BEGIN FOOTER -->
+
+
+</body>
+</html>

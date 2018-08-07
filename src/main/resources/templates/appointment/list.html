@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout}">
+<head>
+<title>Appointment Page</title>
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<div class="page-fixed-main-content">
+			<!-- BEGIN PAGE BASE CONTENT -->
+			<div class="row">
+				<div class="col-md-12">
+					<form action="/appointment/list" class="form-inline">
+						<div class="form-group mb-2">
+							<input type="text" class="form-control" name="name"
+								placeholder="Search User" /> <input type="submit"
+								value="Search" class="btn btn-primary" />
+						</div>
+					</form>
+					<div class="card">
+						<div class="card card-body">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Id</th>
+										<th>Appointment Date</th>
+										<th>Appointment Time</th>
+										<th>Date </th>
+										<th>State</th>
+										<th>createdOn</th>
+		                                <th>ModifyOn</th>
+										<th>Start Time</th>
+									   <th>Stop Time</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="appointment:${appointments}">
+										<td th:text="${appointment.id}"></td>
+										<td th:text="${appointment.date}"></td>
+										<td th:text="${appointment.time}"></td>
+										<td th:text="${appointment.date}"></td>
+										<!-- <td th:text="${appointment.description}"></td> -->
+										<td th:text="${appointment.stateId}"></td>
+										<td th:text="${appointment.startTime}"></td>
+										<td th:text="${appointment.createdOn}"></td>
+							            <td th:text="${appointment.modifiedOn}"></td>
+									    <td th:text="${appointment.stopTime}"></td>
+										
+									    
+										<td>
+										<a th:href="@{/add/view(id=${appointment.id})}"
+											class="btn btn-success">view</a>
+										<a th:href="@{/add/update(id=${appointment.id})}"
+											class="btn btn-warning ">Update</a>
+											<a th:href="@{/appointment/delete(id=${appointment.id})}"
+											class="btn btn-danger">Delete</a></td>
+											
+									</tr>
+								</tbody>
+
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

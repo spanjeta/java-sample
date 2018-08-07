@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Reshedule</title>
+</head>
+<body>
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Available Slots</h4>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="row">
+
+					<div class="panel panel-body">
+
+						<form>
+							<div class="col-md-1">
+
+								<span
+									class="caption-subject font-blue-madison bold uppercase time-slot-heading">21-02-2018</span>
+							</div>
+							<div class="col-md-11">
+								<div class="time-heading">
+									<div id="next-available-slots" class="row">
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-1"
+												data-index="0" value="2016-09-21" /> <label
+												for="time-slot-1">9am-10am </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-2"
+												data-index="1" value="2016-09-26" /> <label
+												for="time-slot-2">10am-11am</label>
+											<!-- longest day name -->
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-3"
+												data-index="2" value="2016-09-25" /> <label
+												for="time-slot-3">11am-12pm</label>
+											<!-- longest month name -->
+										</div>
+
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-4"
+												data-index="3" value="2016-09-25" /> <label
+												for="time-slot-4">1pm-2pm</label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-5"
+												data-index="4" value="2016-09-25" /> <label
+												for="time-slot-5">2pm-3pm</label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-6"
+												data-index="5" value="2016-09-25" /> <label
+												for="time-slot-6">3pm-4pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-7"
+												data-index="6" value="2016-09-25" /> <label
+												for="time-slot-7">4pm-5pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-8"
+												data-index="7" value="2016-09-25" /> <label
+												for="time-slot-8">5pm-6pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-9"
+												data-index="8" value="2016-09-25" /> <label
+												for="time-slot-9">6pm-7pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-10"
+												data-index="9" value="2016-09-25" /> <label
+												for="time-slot-10">7pm-8pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-11"
+												data-index="10" value="2016-09-25" /> <label
+												for="time-slot-11">8m-9pm </label>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="clearfix"></div>
+
+					</div>
+					<div class="panel panel-body">
+
+						<form>
+							<div class="col-md-1">
+
+								<span
+									class="caption-subject font-blue-madison bold uppercase time-slot-heading">22-02-2018</span>
+							</div>
+							<div class="col-md-11">
+								<div class="time-heading">
+									<div id="next-available-slots" class="row">
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-12"
+												data-index="0" value="2016-09-21" /> <label
+												for="time-slot-12">9am-10am </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-13"
+												data-index="1" value="2016-09-26" /> <label
+												for="time-slot-13">10am-11am</label>
+											<!-- longest day name -->
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-14"
+												data-index="2" value="2016-09-25" /> <label
+												for="time-slot-14">11am-12pm</label>
+											<!-- longest month name -->
+										</div>
+
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-15"
+												data-index="3" value="2016-09-25" /> <label
+												for="time-slot-15">1pm-2pm</label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-16"
+												data-index="4" value="2016-09-25" /> <label
+												for="time-slot-16">2pm-3pm</label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-17"
+												data-index="5" value="2016-09-25" /> <label
+												for="time-slot-17">3pm-4pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-18"
+												data-index="6" value="2016-09-25" /> <label
+												for="time-slot-18">4pm-5pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-19"
+												data-index="7" value="2016-09-25" /> <label
+												for="time-slot-19">5pm-6pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-20"
+												data-index="8" value="2016-09-25" /> <label
+												for="time-slot-20">6pm-7pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-21"
+												data-index="9" value="2016-09-25" /> <label
+												for="time-slot-21">7pm-8pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-22"
+												data-index="10" value="2016-09-25" /> <label
+												for="time-slot-22">8m-9pm </label>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="clearfix"></div>
+
+					</div>
+					<div class="panel panel-body">
+
+						<form>
+							<div class="col-md-1">
+
+								<span
+									class="caption-subject font-blue-madison bold uppercase time-slot-heading">23-02-2018</span>
+							</div>
+							<div class="col-md-11">
+								<div class="time-heading">
+									<div id="next-available-slots" class="row">
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-23"
+												data-index="0" value="2016-09-21" /> <label
+												for="time-slot-23">9am-10am </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-24"
+												data-index="1" value="2016-09-26" /> <label
+												for="time-slot-24">10am-11am</label>
+											<!-- longest day name -->
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-25"
+												data-index="2" value="2016-09-25" /> <label
+												for="time-slot-25">11am-12pm</label>
+											<!-- longest month name -->
+										</div>
+
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-26"
+												data-index="3" value="2016-09-25" /> <label
+												for="time-slot-26">1pm-2pm</label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-27"
+												data-index="4" value="2016-09-25" /> <label
+												for="time-slot-27">2pm-3pm</label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-28"
+												data-index="5" value="2016-09-25" /> <label
+												for="time-slot-28">3pm-4pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-29"
+												data-index="6" value="2016-09-25" /> <label
+												for="time-slot-29">4pm-5pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-30"
+												data-index="7" value="2016-09-25" /> <label
+												for="time-slot-30">5pm-6pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-31"
+												data-index="8" value="2016-09-25" /> <label
+												for="time-slot-31">6pm-7pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-32"
+												data-index="9" value="2016-09-25" /> <label
+												for="time-slot-32">7pm-8pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-33"
+												data-index="10" value="2016-09-25" /> <label
+												for="time-slot-33">8m-9pm </label>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="clearfix"></div>
+
+					</div>
+					<div class="panel panel-body">
+
+						<form>
+							<div class="col-md-1">
+
+								<span
+									class="caption-subject font-blue-madison bold uppercase time-slot-heading">24-02-2018</span>
+							</div>
+							<div class="col-md-11">
+								<div class="time-heading">
+									<div id="next-available-slots" class="row">
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-34"
+												data-index="0" value="2016-09-21" /> <label
+												for="time-slot-34">9am-10am </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-35"
+												data-index="1" value="2016-09-26" /> <label
+												for="time-slot-35">10am-11am</label>
+											<!-- longest day name -->
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-36"
+												data-index="2" value="2016-09-25" /> <label
+												for="time-slot-36">11am-12pm</label>
+											<!-- longest month name -->
+										</div>
+
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-37"
+												data-index="3" value="2016-09-25" /> <label
+												for="time-slot-37">1pm-2pm</label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-38"
+												data-index="4" value="2016-09-25" /> <label
+												for="time-slot-38">2pm-3pm</label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-39"
+												data-index="5" value="2016-09-25" /> <label
+												for="time-slot-39">3pm-4pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-40"
+												data-index="6" value="2016-09-25" /> <label
+												for="time-slot-40">4pm-5pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-41"
+												data-index="7" value="2016-09-25" /> <label
+												for="time-slot-41">5pm-6pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-42"
+												data-index="8" value="2016-09-25" /> <label
+												for="time-slot-42">6pm-7pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-43"
+												data-index="9" value="2016-09-25" /> <label
+												for="time-slot-43">7pm-8pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-44"
+												data-index="10" value="2016-09-25" /> <label
+												for="time-slot-44">8m-9pm </label>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="clearfix"></div>
+
+					</div>
+					<div class="panel panel-body">
+
+						<form>
+							<div class="col-md-1">
+
+								<span
+									class="caption-subject font-blue-madison bold uppercase time-slot-heading">25-02-2018</span>
+							</div>
+							<div class="col-md-11">
+								<div class="time-heading">
+									<div id="next-available-slots" class="row">
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-45"
+												data-index="0" value="2016-09-21" /> <label
+												for="time-slot-45">9am-10am </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-46"
+												data-index="1" value="2016-09-26" /> <label
+												for="time-slot-46">10am-11am</label>
+											<!-- longest day name -->
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-47"
+												data-index="2" value="2016-09-25" /> <label
+												for="time-slot-47">11am-12pm</label>
+											<!-- longest month name -->
+										</div>
+
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-48"
+												data-index="3" value="2016-09-25" /> <label
+												for="time-slot-48">1pm-2pm</label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-49"
+												data-index="4" value="2016-09-25" /> <label
+												for="time-slot-49">2pm-3pm</label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-50"
+												data-index="5" value="2016-09-25" /> <label
+												for="time-slot-50">3pm-4pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-51"
+												data-index="6" value="2016-09-25" /> <label
+												for="time-slot-51">4pm-5pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-52"
+												data-index="7" value="2016-09-25" /> <label
+												for="time-slot-52">5pm-6pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-53"
+												data-index="8" value="2016-09-25" /> <label
+												for="time-slot-53">6pm-7pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-54"
+												data-index="9" value="2016-09-25" /> <label
+												for="time-slot-54">7pm-8pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-55"
+												data-index="10" value="2016-09-25" /> <label
+												for="time-slot-55">8m-9pm </label>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="clearfix"></div>
+
+					</div>
+					<div class="panel panel-body">
+
+						<form>
+							<div class="col-md-1">
+
+								<span
+									class="caption-subject font-blue-madison bold uppercase time-slot-heading">26-02-2018</span>
+							</div>
+							<div class="col-md-11">
+								<div class="time-heading">
+									<div id="next-available-slots" class="row">
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-56"
+												data-index="0" value="2016-09-21" /> <label
+												for="time-slot-56">9am-10am </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-57"
+												data-index="1" value="2016-09-26" /> <label
+												for="time-slot-57">10am-11am</label>
+											<!-- longest day name -->
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-58"
+												data-index="2" value="2016-09-25" /> <label
+												for="time-slot-58">11am-12pm</label>
+											<!-- longest month name -->
+										</div>
+
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-59"
+												data-index="3" value="2016-09-25" /> <label
+												for="time-slot-59">1pm-2pm</label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-60"
+												data-index="4" value="2016-09-25" /> <label
+												for="time-slot-60">2pm-3pm</label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-61"
+												data-index="5" value="2016-09-25" /> <label
+												for="time-slot-61">3pm-4pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-62"
+												data-index="6" value="2016-09-25" /> <label
+												for="time-slot-62">4pm-5pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-63"
+												data-index="7" value="2016-09-25" /> <label
+												for="time-slot-63">5pm-6pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-64"
+												data-index="8" value="2016-09-25" /> <label
+												for="time-slot-64">6pm-7pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-65"
+												data-index="9" value="2016-09-25" /> <label
+												for="time-slot-65">7pm-8pm </label>
+										</div>
+										<div class="slot col-xs-2 col-sm-2">
+											<input type="checkbox" name="time-slot" id="time-slot-66"
+												data-index="10" value="2016-09-25" /> <label
+												for="time-slot-66">8m-9pm </label>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="clearfix"></div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- content -->
+</body>
+</html>

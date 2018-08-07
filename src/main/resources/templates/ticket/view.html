@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>New Activity</title>
+</head>
+<body>
+
+	        <!-- Start content -->
+           <div layout:fragment="content">
+           <div class="content">
+           <div class="container-fluid">
+
+                    <!-- BEGIN PAGE BASE CONTENT -->
+                    <div class="row">
+                     <div class="col-md-12">
+                        <div class="page-title-box">
+                           <h4 class="page-title pull-left">View Ticket</h4>
+                           
+                           <div class="clearfix"></div>
+                        </div>
+                     </div>
+                  </div>
+                    
+                 <div class="row">
+
+                     <div class="col-md-12">
+                                        <!-- BEGIN PORTLET -->
+                                        <div class="panel-body panel">
+                                        <div class="col-md-12 ">
+                                            <div class="portlet-body clearfix">
+                                                <!--BEGIN TABS-->
+                                                
+                                
+                                <div class="portlet-body">
+                                 <div class="col-md-12">
+									
+                                            <div class="row">
+                                                <div class=" profile-info">
+                                                 
+                                              
+                                                <!--end col-md-8-->
+                                
+                                                    <div class="portlet sale-summary">
+                                                       
+                                                        <div class="portlet-body">
+                                                            <ul class="list-unstyled">
+                                                                <li>
+                                                                    <span class="sale-info"> Title:
+                                                                    </span>
+                                                                    <span class="sale-num"  th:text="${ticket.title}">  </span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="sale-info" th:text="${ticket.description}"> Description:
+                                                                    </span>
+                                                                    <span class="sale-num"> </span>
+                                                             </li>
+                                                                
+                                                            </ul>    <div class="margin-top-10">
+                                            <a th:href="@{/ticket/reply(id=${ticket.id})}" class="btn green">Reply </a>
+                                        </div>
+                                                        </div>
+                                                    </div>
+                                         </div>
+                                                <!--end col-md-4-->
+                                            </div>
+                                            <!--end row-->
+                                  
+										</div>
+                                </div>
+                            </div>
+                                    
+                                   
+                      
+                                        <!-- END PORTLET -->
+                                    </div>
+                                    </div>
+                          </div>
+                          </div>
+                                          
+                       
+                                           
+                                    
+                                   
+                    
+                             <div class="clearfix"></div>
+                    <!-- END DASHBOARD STATS 1-->
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <!-- END PAGE BASE CONTENT -->
+                </div>
+                </div>
+                </div>
+               
+                <!-- BEGIN FOOTER -->
+           
+	
+	
+</body>
+</html>

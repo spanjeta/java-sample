@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/main_layout_admin}">
+<head>
+<title>Time Slot</title>
+</head>
+<body>
+
+
+	<!-- Start content -->
+	<div layout:fragment="content">
+		<div class="content">
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE BASE CONTENT -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-box">
+							<h4 class="page-title pull-left">Add TimeSlot</h4>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<!-- BEGIN PORTLET -->
+						<div class="panel-body panel">
+							<div class="col-md-12 ">
+								<div class="portlet-body clearfix">
+									<!--BEGIN TABS-->
+
+
+									<div class="portlet-body">
+										<div class="col-md-6 col-md-offset-3">
+											<form role="form" action="/slot/add" th:object="${timeSlot}"
+												method="post">
+
+
+												<div class="form-group">
+													<label for="Date" class="control-label">Date</label> <input
+														class="form-control" type="date" th:field="*{date}"
+														id="date">
+												</div>
+												<div class="form-group">
+													<label class="checkbox-inline"> <input
+														type="checkbox" name="active" th:checked="${slot_9am}" />
+														(9AM-10AM)
+													</label> <label class="checkbox-inline"> <input
+														type="checkbox" name="active" th:checked="${slot_10am}" />
+														(10AM-11AM)
+													</label> <label class="checkbox-inline"> <input
+														type="checkbox" name="active" th:checked="${slot_11am}" />
+														(11AM-12PM)
+													</label> <label class="checkbox-inline"> <input
+														type="checkbox" name="active" th:checked="${slot_12pm}" />
+														(12PM-1PM)
+													</label> <label class="checkbox-inline"> <input
+														type="checkbox" name="active" th:checked="${slot_1pm}" />
+														(1PM-2PM)
+													</label> <label class="checkbox-inline"> <input
+														type="checkbox" name="active" th:checked="${slot_2pm}" />
+														(2PM-3PM)
+													</label> <label class="checkbox-inline"> <input
+														type="checkbox" name="active" th:checked="${slot_3pm}" />
+														(3PM-4PM)
+													</label> <label class="checkbox-inline"> <input
+														type="checkbox" name="active" th:checked="${slot_4pm}" />
+														(4PM-5PM)
+													</label> <label class="checkbox-inline"> <input
+														type="checkbox" name="active" th:checked="${slot_5pm}" />
+														(5PM-6PM)
+													</label> <label class="checkbox-inline"> <input
+														type="checkbox" name="active" th:checked="${slot_6pm}" />
+														(6PM-7PM)
+													</label> <label class="checkbox-inline"> <input
+														type="checkbox" name="active" th:checked="${slot_7pm}" />
+														(7PM-8PM)
+													</label> <label class="checkbox-inline"> <input
+														type="checkbox" name="active" th:checked="${slot_8pm}" />
+														(8PM-9PM)
+													</label>
+
+												</div>
+
+												<div class="col-xs-12 form-group">
+													<input type="submit" value="Submit" class="btn green" />
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+
+
+
+								<!-- END PORTLET -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="clearfix"></div>
+				<!-- END DASHBOARD STATS 1-->
+
+
+				<!-- END PAGE BASE CONTENT -->
+			</div>
+		</div>
+	</div>
+
+	<!-- BEGIN FOOTER -->
+
+
+
+</body>
+
+</html>
